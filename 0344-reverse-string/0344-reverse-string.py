@@ -5,13 +5,13 @@ class Solution:
         """
         left = 0
         right = len(s) - 1
-        temp = ''
+        #temp = ''
 
         while(left < right):
 
-            temp = s[left]
-            s[left] = s[right]
-            s[right] = temp
+            #temp = s[left]
+            s[left],s[right] = s[right],s[left]
+            #s[right] = temp
             left +=1
             right -=1
             
