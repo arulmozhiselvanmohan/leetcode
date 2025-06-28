@@ -3,15 +3,14 @@ class Solution:
         left=0
         right = len(numbers)-1
 
-        while(left<len(numbers)):
-            while(left<right):
-                if(target == numbers[left]+numbers[right]):
-                    return([left+1,right+1])
-                else:
-                    right -=1
-            left +=1
-            right = len(numbers)-1
+        while left < right:
+            current_sum = numbers[left] + numbers[right]
         
-        return [0]
+            if current_sum == target:
+                return [left + 1, right + 1]  
+            elif current_sum < target:
+                left += 1
+            else:
+                right -= 1
         
      
