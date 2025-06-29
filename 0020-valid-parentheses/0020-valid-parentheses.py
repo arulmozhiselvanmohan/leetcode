@@ -17,7 +17,7 @@ class Solution:
                     if (braces[-1] != "("):
                         return False
                     braces.pop()
-                elif s[i] == "]":
+                else:
                     if (braces[-1] != "["):
                         return False
                     braces.pop()
