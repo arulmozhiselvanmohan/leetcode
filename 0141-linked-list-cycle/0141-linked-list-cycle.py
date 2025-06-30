@@ -7,10 +7,8 @@
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         my_map = set()
-        if head:
-            curr = head
-        else:
-            return False
+    
+        curr = head
 
         while curr:
             if curr in my_map:
