@@ -6,18 +6,18 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        my_map = set()
+         my_map = set()
     
-        curr = head
+         curr = head
 
-        while curr:
-            if curr in my_map:
-                return True
-                break
+         while curr:
+             if curr in my_map:
+                 return True
+                 break
                 
-            my_map.add(curr)
-            curr = curr.next
+             my_map.add(curr)
+             curr = curr.next
         
-        return False
+         return False
 
         
