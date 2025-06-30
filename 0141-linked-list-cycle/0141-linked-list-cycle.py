@@ -13,6 +13,8 @@ class Solution:
         while curr:
             if curr in my_map:
                 return True
+                break
+                
             my_map.add(curr)
             curr = curr.next
         
