@@ -1,23 +1,17 @@
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
+        left, right = 0, len(nums) - 1
 
-        my_ref = set(nums)
+        while left <= right:
+            mid = (left + right) // 2
+
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
+
+        # If not found, left is the correct insert position
+        return left
         
-        if target in my_ref:
-            return nums.index(target)
-        else:
-            for i in range(1,len(nums)+1):
-                if target-i in my_ref:
-                    return nums.index(target-i)+1
-                elif target+i in my_ref:
-                    return nums.index(target+i)
-            return 0       
-            
-            
-
-        
-      
-
-                   
-
-    
