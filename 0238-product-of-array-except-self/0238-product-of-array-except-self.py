@@ -1,0 +1,21 @@
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        output = [1] * n  # Step 1: initialize output array with 1s
+
+        # Step 2: compute prefix products (product of all elements to the left)
+        prefix = 1
+        for i in range(n):
+            output[i] = prefix
+            prefix *= nums[i]
+
+        # Step 3: multiply by suffix products (product of all elements to the right)
+        suffix = 1
+        for i in range(n-1, -1, -1):
+            output[i] *= suffix
+            suffix *= nums[i]
+
+        return output
+
+
+        
