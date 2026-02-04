@@ -4,7 +4,8 @@ class Solution:
         anagram = {}
 
         for index, value in enumerate(strs):
-            pattern = "".join(sorted(value))
+            #pattern = "".join(sorted(value))
+            pattern = tuple(sorted(value))
             if pattern in anagram:
                 anagram[pattern].append(value)
             else:
