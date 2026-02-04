@@ -5,12 +5,11 @@ class Solution:
 
         for index, value in enumerate(strs):
             pattern = "".join(sorted(value))
-            
+
             if pattern in anagram:
                 anagram[pattern].append(value)
             else:
-                anagram[pattern] = []
-                anagram[pattern].append(value)
+                anagram[pattern] = [value]
         
         return list(anagram.values())
 
