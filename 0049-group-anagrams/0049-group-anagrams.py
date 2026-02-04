@@ -5,6 +5,7 @@ class Solution:
 
         for index, value in enumerate(strs):
             pattern = "".join(sorted(value))
+            
             if pattern in anagram:
                 anagram[pattern].append(value)
             else:
