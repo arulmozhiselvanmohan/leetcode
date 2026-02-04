@@ -1,11 +1,12 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
 
-          num_map = {}
-
-          for i,num in enumerate(nums): 
-            remaining = target-num
-            if remaining in num_map:
-                return [num_map[remaining],i]
-            num_map[num] = i  
+            hash_map = {}
+            
+            for index, number in  enumerate(nums):
+                remaining = target - number
+                if remaining in hash_map:
+                    return [hash_map[remaining],index]
+                else:
+                    hash_map[number] = index
        
