@@ -3,9 +3,10 @@ class Solution:
         
         nums_table = Counter(nums)
         result= []
+        ref = len(nums)/3
 
         for key, value in nums_table.items():
-            if value > len(nums)/3:
+            if value > ref:
                 result.append(key)
         
         return result
