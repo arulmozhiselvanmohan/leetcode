@@ -1,6 +1,6 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        def maxProfit(self, prices: List[int]) -> int:
+       
         l = 0
         n = len(prices)
         stock_total = 0
