@@ -6,15 +6,9 @@ class Solution:
         for i,value in enumerate(digits):
             number += (digits[i]) * (10 ** (length-i-1))
         
-        number +=1
-  
+        number +=1 
 
-        #digit_list = [int(digit) for digit in str(number)]
-        digit_list = []
-        for digit in str(number):
-            digit_list.append(int(digit))
-            
-            
+        digit_list = [int(digit) for digit in str(number)]       
 
         return digit_list
 
