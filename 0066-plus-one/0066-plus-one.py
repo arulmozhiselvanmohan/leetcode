@@ -8,7 +8,10 @@ class Solution:
         
         number +=1 
 
-        digit_list = [int(digit) for digit in str(number)]       
+        digit_list = []
+
+        for digit in str(number):
+            digit_list.append(int(digit))     
 
         return digit_list
 
