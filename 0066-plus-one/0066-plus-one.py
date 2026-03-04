@@ -7,9 +7,14 @@ class Solution:
             number += (digits[i]) * (10 ** (length-i-1))
         
         number +=1
+  
 
-        phone_number = 2125551234
-        digit_list = [int(digit) for digit in str(number)]
+        #digit_list = [int(digit) for digit in str(number)]
+        digit_list = []
+        for digit in str(number):
+            digit_list.append(int(digit))
+            
+            
 
         return digit_list
 
