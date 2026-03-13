@@ -1,0 +1,10 @@
+class Solution:
+    def replaceElements(self, arr: List[int]) -> List[int]:
+        res = [-1]
+
+        for i in range(len(arr)-1,0,-1):
+            res.insert(0,max(arr[i],res[0]))
+        
+        return res
+                    
+        
