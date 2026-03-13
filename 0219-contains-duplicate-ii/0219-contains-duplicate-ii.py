@@ -7,7 +7,7 @@ class Solution:
             if nums[i] in window:
                 if i-window[nums[i]] <=k:
                     return True
-            window.append(nums[i])
+            window[nums[i]]=i
 
         return False
         
