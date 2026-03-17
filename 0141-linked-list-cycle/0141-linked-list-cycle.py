@@ -6,16 +6,16 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-         my_map = set()  
-         curr = head
 
-         while curr:
-             if curr in my_map:
-                 return True
-                 break              
-             my_map.add(curr)
-             curr = curr.next
-        
-         return False
+        slow = fast = head
 
+        while fast and fast.next:
+
+            slow = slow.next
+            fast = fast.next.next
+
+            if slow == fast:
+                return True
         
+        return False
+   
