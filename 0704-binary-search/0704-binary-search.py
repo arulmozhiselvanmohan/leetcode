@@ -4,13 +4,13 @@ class Solution:
         a,b=0,len(nums)-1
     
         while a<=b:
-            k = int((a+b)/2)
-            if(nums[k]==target):
-                return k
-            if(nums[k]>target):
-                b=k-1
+            mid = int((a+b)/2)
+            if(nums[mid]==target):
+                return mid
+            if(nums[mid]>target):
+                b=mid-1
             else:
-                a=k+1
+                a=mid+1
         
         return -1
         
