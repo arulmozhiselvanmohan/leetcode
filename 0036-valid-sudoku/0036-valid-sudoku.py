@@ -1,6 +1,6 @@
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        
+        #box_index = (row // 3) * 3 + (col // 3)
         search_map = {}
 
         for row in range(0,len(board)):
